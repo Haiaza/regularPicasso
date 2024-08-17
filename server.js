@@ -31,9 +31,9 @@ app.use(
 })
 );
 app.use('/auth', authController);
-// app.use('/users/:userId/paintings',paintingController);
 app.use(passUserToView)
 app.use(isSignedIn);
+app.use('/users/:userId/paintings',paintingController);
 app.use('/users', usersController);
 
 app.get('/', (req, res) => {

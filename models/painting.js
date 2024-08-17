@@ -4,8 +4,8 @@ const paintingSchema = new mongoose.Schema({
     name: { 
         type: String, 
         required: true, unique: true },
-        
-    Description: { 
+
+    description: { 
         type: String, 
         required: true },
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Painting</title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Create a New Painting</h1>
+    <form action="/users/<%= user._id %>/paintings" method="POST">
+        <label for="name">Painting Name:</label>
+        <input type="text" name="name" id="name" required />
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" required />
+        <button type="submit">Create Painting</button>
+    </form>
+    </form>
+    <form action="/users/<%= user._id %>/paintings">
+        <button type="submit">Back to Paintings</button>
+    </form>
+</body>
+
+</html>
