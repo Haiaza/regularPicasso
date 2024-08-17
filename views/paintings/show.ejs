@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    <%= painting.name %> Details
+    </title>
+</head>
+<body>
+<%- include('../partials/_navbar.ejs') %>
+    <h1>
+        The <%= painting.name %> by <%= painting.owner.username %>
+    </h1>
+
+    <p>Description: <%= painting.description %>
+    </p>
+
+    <a href="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">Edit this painting</a>
+    <a href="/users/<%= user._id %>/paintings">Back to paintings List</a>
+</body>
+</html>

@@ -58,8 +58,8 @@ router.get('/:paintingId/edit', async (req, res) => {
 
 router.put('/:paintingId', async (req, res) => {
     try {
-        const { name, paintingDescription } = req.body
-        await Painting.findByIdAndUpdate(req.params.paintingId, { name, paintingDescription })
+        const { name, description } = req.body
+        await Painting.findByIdAndUpdate(req.params.paintingId, { name, description })
         res.redirect(`/users/${req.session.user._id}/paintings`)
     } catch (error) {
         console.error('Error updating painting:', error)
