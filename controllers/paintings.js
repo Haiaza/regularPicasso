@@ -2,6 +2,15 @@ const express = require('express')
 const router = express.Router();
 const Painting = require('../models/painting.js')
 
+router.get('/', async (req, res) => {
+    try {
+        const paintings = await Painting.find({ owner: req.session.user._id });
+        res.render('paintings/index.ejs', { paintings });
+    } catch (error) {
+        console.error(error);
+        res.redirect('/');
+    }
+});
 
 router.post('/', async (req, res) => {
     try {
@@ -23,15 +32,6 @@ router.get('/new', (req, res) => {
     res.render('paintings/new.ejs')
 });
 
-router.get('/', async (req, res) => {
-    try {
-        const paintings = await Painting.find({ owner: req.session.user._id });
-        res.render('paintings/index.ejs', { paintings });
-    } catch (error) {
-        console.error(error);
-        res.redirect('/');
-    }
-});
 
 router.get('/:paintingId', async (req, res) => {
     try {

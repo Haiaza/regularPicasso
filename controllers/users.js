@@ -22,7 +22,13 @@ router.get('/:userId', async (req, res) => {
     if (!user) {
         return res.redirect('/users')
     }
-    res.render('users/show.ejs', { user, paintings })
+    
+    const userPaintings = await Painting.find({ owner: userId})
+
+    res.render('users/show.ejs', { 
+        user, 
+        paintings: userPaintings 
+    })
     } catch (error) {
     console.error(error)
     res.redirect('/users')
