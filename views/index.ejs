@@ -10,7 +10,14 @@
     <%- include('./partials/_navbar.ejs') %>
     <h1>Welcome to our Art Gallery!</h1>
 
-    <h2>Find your muse!</h2>
+    <% if(user) { %>
+        <a href="/users/:userId/">
+            <h2>Find your muse!</h2>
+            <p>Check out the Community</p>
+        </a>
+        <% } else { %>
+        <a href="/auth/sign-in">Sign In</a>
+        <% } %>
     </h2>
 </body>
 </html>

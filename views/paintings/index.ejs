@@ -9,7 +9,8 @@
 
 <body>
 <%- include('../partials/_navbar.ejs') %>
-    <h1>Your Custom Paintings</h1>
+    <h1>Welcome <%= user.username %></h1>
+    <h2>Your Personal Collection</h2>
     <ul>
         <% paintings.forEach(painting=> { %>
         <li>

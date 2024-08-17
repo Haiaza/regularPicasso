@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= user.username %>'s Paintings
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+        <h1>
+            <%= user.username %>'s Custom Paintings
+        </h1>
+
+        <ul>
+            <% paintings.forEach(painting => { %>
+                <li>
+                    <a href="/users/<%= user._id %>/paintings/<%= painting._id %>">
+                        <%= painting.name %>
+                    </a> - <%= painting.description%>
+                </li>
+                <% }) %>
+        </ul>
+
+        <a href="/users">Back to Community</a>
+</body>
+
+</html>
