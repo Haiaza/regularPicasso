@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/user.js')
 const Painting = require('../models/painting.js')
+const mongoose = require('mongoose')
 
 router.get('/', async (req, res) => {
     try {
@@ -16,8 +17,8 @@ router.get('/', async (req, res) => {
 router.get('/:userId', async (req, res) => {
     try {
         const userId = req.params.userId
-        const user = await User.findById(userId) 
-        const paintings = await Painting.find(userId.username) 
+        const userIdObject = mongoose.Types.ObjectId(userId)
+        const user = await User.findById(userIdObject)
 
     if (!user) {
         return res.redirect('/users')
