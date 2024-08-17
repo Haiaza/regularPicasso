@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:userId', async (req, res) => {
     try {
         const userId = req.params.userId
-        const userIdObject = mongoose.Types.ObjectId(userId)
+        const userIdObject = new mongoose.Types.ObjectId(userId)
         const user = await User.findById(userIdObject)
 
     if (!user) {
