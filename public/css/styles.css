@@ -60,9 +60,17 @@ a h2,a p{
     text-decoration: none;
 }
 
-h1, h2, form, p{
+a h2:hover ,a p:hover {
+    color: #219ebc;
+}
+
+h1, h2, form, p, li a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+li a {
+    color: #023047;
 }
