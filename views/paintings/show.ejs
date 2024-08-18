@@ -15,8 +15,9 @@
 
     <p>Description: <%= painting.description %>
     </p>
-
-    <a href="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">Edit this painting</a>
+    <% if (condition) { %>
+        <a href="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">Edit this painting</a>
+    <% } %>
     <a href="/users/<%= user._id %>/paintings">Back to paintings List</a>
 </body>
 </html>

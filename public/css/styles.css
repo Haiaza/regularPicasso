@@ -1,0 +1,36 @@
+html {
+    font-size: 10px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 ;
+    background-color: #DEE2E6;
+    font-size: 2rem
+}
+
+nav {
+    background: #E9ECEF;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 2em;
+    background-color: #E9ECEF;
+    color: #343A40;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
