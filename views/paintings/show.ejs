@@ -9,14 +9,16 @@
 <body>
 <%- include('../partials/_navbar.ejs') %>
     <h1>
-        The <%= painting.name %> by <%= painting.owner %>
+        The <%= painting.name %> by <%= painting.owner.username %>
     </h1>
-
+    <p>Owner ID: <%= painting.owner._id %></p>
+    <p>Session User ID: <%= sessionOwner._id %></p>
+    <p>User ID: <%= user._id %></p>
     <p>Description: <%= painting.description %>
     </p>
-    <% { %>
-        <a href="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">Edit this painting</a>
+    <% if (painting.owner._id.toString() === sessionOwner._id.toString()) { %>
+        <a class="footer" href="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">Edit this painting</a>
     <% } %>
-    <a href="/users/<%= user._id %>/paintings">Back to paintings List</a>
+    <a class="footer" href="/users/<%= user._id %>/paintings">Back to paintings List</a>
 </body>
 </html>

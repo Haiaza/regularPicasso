@@ -36,8 +36,8 @@ router.get('/new', (req, res) => {
 
 router.get('/:paintingId', async (req, res) => {
     try {
-        const painting = await Painting.findById(req.params.paintingId)
-                res.render('paintings/show.ejs', { painting })
+        const painting = await Painting.findById(req.params.paintingId).populate("owner")
+                res.render('paintings/show.ejs', { painting, sessionOwner: req.session.user })
     } catch (error) {
         console.error(error)
         res.redirect(`/users/${req.session.user._id}/paintings`)

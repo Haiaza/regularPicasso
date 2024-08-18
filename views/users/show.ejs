@@ -19,7 +19,7 @@
         <ul>
             <% paintings.forEach(painting => { %>
                 <li>
-                    <a href="/">
+                    <a href="/users/<%= user._id %>/paintings/<%= painting._id %>">
                         <%= painting.name %>
                     </a>
                 </li>
