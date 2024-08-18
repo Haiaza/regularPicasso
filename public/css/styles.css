@@ -10,9 +10,14 @@ html {
     font-size: 2rem
 }
 
+a {
+    text-decoration: none;
+}
+
 nav {
     background: #E9ECEF;
     padding: 10px;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -22,7 +27,6 @@ nav a {
     font-size: 2em;
     background-color: #E9ECEF;
     color: #343A40;
-    text-decoration: none;
 }
 
 nav a:hover {
@@ -31,6 +35,34 @@ nav a:hover {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #E9ECEF;
     color: #333;
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: 3px;
+    background-color: #8ecae6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+a h2,a p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #212529;
+    text-decoration: none;
+}
+
+h1, h2, form, p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
