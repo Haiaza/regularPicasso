@@ -14,16 +14,18 @@
     <h2>Your Personal Collection</h2>
     <ul>
         <% paintings.forEach(painting=> { %>
-        <li>
-            <a href="/users/<%= user._id %>/paintings/<%= painting._id %>">
-            <%= painting.name %>
-            </a>
-            <form action="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">
+            <li>
+            <div class="">
+                <a href="/users/<%= user._id %>/paintings/<%= painting._id %>">
+                    <%= painting.name %>
+                </a>
+                <form action="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">
                 <button type="submit">Edit</button>
             </form>
             <form action="/users/<%= user._id %>/paintings/<%= painting._id %>?_method=DELETE" method="POST">
                 <button type="submit">Delete</button>
             </form>
+        </div>
         </li>
         <% }); %>
     </ul>
@@ -32,8 +34,6 @@
         <button type="submit">Create a new painting</button>
     </form>
 
-    <form action="/">
-        <button type="submit">Back to home</button>
-    </form>
+    <a class="footer" href="/">Back to Home</a>
 </body>
 </html>

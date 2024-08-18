@@ -39,10 +39,19 @@ body {
     color: #333;
 }
 
+div {
+    background-color: #F8F9FA;
+    padding: 1rem;
+}
+
+form {
+    background-color: #ADB5BD;
+}
+
 button {
     margin-top: 1.5rem;
     padding: 3px;
-    background-color: #003566;
+    background-color: #2b2d42;
     color: white;
     border: none;
     border-radius: 5px;
@@ -50,7 +59,7 @@ button {
 }
 
 button:hover{ 
-    background-color: #001d3d;
+    background-color: #8d99ae;
     
 }
 
