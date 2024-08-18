@@ -15,6 +15,6 @@
     <% if (painting.owner._id.toString() === sessionOwner._id.toString()) { %>
         <a class="footer" href="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">Edit this painting</a>
     <% } %>
-    <a class="footer" href="/users/<%= user._id %>/paintings">Back to paintings List</a>
+    <a class="footer" href="/users/">Back to Community</a>
 </body>
 </html>
