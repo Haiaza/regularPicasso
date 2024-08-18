@@ -9,6 +9,7 @@
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
+    <h1>Hello <%= user.username %></h1>
     <h1>Create a New Painting</h1>
     <form action="/users/<%= user._id %>/paintings" method="POST">
         <label for="name">Painting Name:</label>
