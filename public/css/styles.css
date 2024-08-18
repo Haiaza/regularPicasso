@@ -42,11 +42,16 @@ body {
 button {
     margin-top: 1.5rem;
     padding: 3px;
-    background-color: #8ecae6;
+    background-color: #003566;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+button:hover{ 
+    background-color: #001d3d;
+    
 }
 
 h1 {
@@ -64,7 +69,7 @@ a h2:hover ,a p:hover {
     color: #219ebc;
 }
 
-h1, h2, form, p, li a {
+h1, h2, form, p, li a, .footer  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,4 +78,18 @@ h1, h2, form, p, li a {
 
 li a {
     color: #023047;
+}
+
+li a:hover {
+    color: #212529;
+}
+
+.footer {
+    padding-top: 3rem;
+    color: #ADB5BD;
+    text-decoration: none;
+}
+.footer:hover {
+    color: #6C757D;
+    text-decoration: underline;
 }
