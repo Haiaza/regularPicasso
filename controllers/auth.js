@@ -36,7 +36,7 @@ try {
     res.redirect('/auth/sign-in');
 } 
 catch (error) {
-    console.log(error);
+    console.error();
     res.redirect('/');
 }
 });
@@ -63,7 +63,7 @@ try {
 
     res.redirect('/');
 } catch (error) {
-    console.log(error);
+    console.error();
     res.redirect('/');
 }
 });
