@@ -13,6 +13,7 @@ A Dystopic take on the future of art.
  - [stackOverflow Community](https://stackoverflow.com/questions)
  - [Kevin Powell - Restarting my CSS Brain](https://www.youtube.com/@KevinPowell)
  - [Neat Color Palletes](https://coolors.co)
+ - [Logo](https://www.brandcrowd.com/)
  - [Google](https://google.com)
  
 
