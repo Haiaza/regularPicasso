@@ -18,9 +18,9 @@
         <ul>
             <% paintings.forEach(painting => { %>
                 <li>
-                    <a href="/users/<%= user._id %>/paintings/<%= painting._id %>">
+                    <p>
                         <%= painting.name %>
-                    </a> - <%= painting.description%>
+                    </p>
                 </li>
                 <% }) %>
         </ul>

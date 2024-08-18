@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const Painting = require('../models/painting.js')
+const User = require('../models/user.js')
 
 router.get('/', async (req, res) => {
     try {
@@ -36,7 +37,7 @@ router.get('/new', (req, res) => {
 router.get('/:paintingId', async (req, res) => {
     try {
         const painting = await Painting.findById(req.params.paintingId)
-        res.render('paintings/show.ejs', { painting })
+                res.render('paintings/show.ejs', { painting })
     } catch (error) {
         console.error(error)
         res.redirect(`/users/${req.session.user._id}/paintings`)

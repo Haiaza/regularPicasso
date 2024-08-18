@@ -13,7 +13,7 @@
 
     <p>Description: <%= painting.description %>
     </p>
-    <% if (req.session.user._id == user._id) { %>
+    <% { %>
         <a href="/users/<%= user._id %>/paintings/<%= painting._id %>/edit">Edit this painting</a>
     <% } %>
     <a href="/users/<%= user._id %>/paintings">Back to paintings List</a>
