@@ -36,19 +36,5 @@ router.get('/:userId', async (req, res) => {
     }
 })
 
-router.get('/:userId/', async (req, res) => {
-    try {
-        const userId = req.params.userId
-        const user = await User.findById(userId) 
-
-    if (!user) {
-        return res.redirect('/users')
-    }
-    res.render('users/show.ejs', { user, painting })
-    } catch (error) {
-    console.error(error)
-    res.redirect('/users')
-    }
-})
 
 module.exports = router
